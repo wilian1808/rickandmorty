@@ -1,38 +1,61 @@
-.App {
-  text-align: center;
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*,
+*::after,
+*::before,
+*:focus,
+*:active,
+*:hover {
+    box-shadow: none;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*configuration fonts web app*/
+
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "Techna";
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.eot"); /* IE9 Compat Modes */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.otf") format("opentype"); /* Open Type Font */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.svg") format("svg"); /* Legacy iOS */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.ttf") format("truetype"); /* Safari, Android, iOS */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.woff") format("woff"); /* Modern Browsers */
+    src: url("./assets/fonts/Techna/TechnaSans-Regular.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "SebNeue";
+    src: url("./assets/fonts/Sebneue/Sebneue.eot"); /* IE9 Compat Modes */
+    src: url("./assets/fonts/Sebneue/Sebneue.eot?#iefix") format("embedded-opentype"); /* IE6-IE8 */
+    src: url("./assets/fonts/Sebneue/Sebneue.otf") format("opentype"); /* Open Type Font */
+    src: url("./assets/fonts/Sebneue/Sebneue.svg") format("svg"); /* Legacy iOS */
+    src: url("./assets/fonts/Sebneue/Sebneue.ttf") format("truetype"); /* Safari, Android, iOS */
+    src: url("./assets/fonts/Sebneue/Sebneue.woff") format("woff"); /* Modern Browsers */
+    src: url("./assets/fonts/Sebneue/Sebneue.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
 }
 
-.App-link {
-  color: #61dafb;
+/* end */
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #222831;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }

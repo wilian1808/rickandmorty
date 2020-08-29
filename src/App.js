@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { Route, Redirect } from 'wouter'
+import Character from 'pages/Character'
+import Location from 'pages/Location'
+import Episode from 'pages/Episode'
+import ErrorPage from 'pages/404'
+import Home from 'pages/Home'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main>
+      
+      <Route path="/" component={Home} />
+      <Route path="/characters/:number" component={Character} />
+      <Route path="/characters">
+        {
+          <Redirect to="/characters/1" />
+        }
+      </Route>
+      <Route path="/locations" component={Location} />
+      <Route path="/episodes" component={Episode} />
+      <Route path="/:" component={ErrorPage} />
+
+    </main>
   );
 }
 
