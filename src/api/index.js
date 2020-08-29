@@ -46,6 +46,7 @@ export async function getCharacterHome({ count = 0 }) {
     numbers[i] = randomNumber
   }
 
-  const { data } = await Axios(`${API_URL}/character/${numbers.join()}`)
+  //const { data } = await Axios(`${API_URL}/character/${numbers.join()}`)
+  const { data } = await Axios(`${API_URL}/character/1,2,3,4`)
   return data
 }

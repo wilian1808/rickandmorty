@@ -9,7 +9,7 @@ export default function Header ({number = 1}) {
   const active = pathActual => (pathActual === document.location.pathname) ? `${styl.Nav__active}` : ''
   const styl = useStyles()
   const [menu, setMenu] = React.useState('')
-  const viewNav = () => (menu == '') ? setMenu(`${styl.Nav__movil}`) : setMenu('')
+  const viewNav = () => (menu === '') ? setMenu(`${styl.Nav__movil}`) : setMenu('')
   
   return (
     <header className={styl.Header} >
@@ -51,7 +51,7 @@ const useStyles = createUseStyles({
     width: '100%',
     padding: '.8em 0',
     position: 'relative',
-    borderTop: 'solid 4px #4f8a8b',
+    borderTop: 'solid 5px #4f8a8b',
     backgroundColor: '#ffffff',
     boxShadow: '1px 1px 0px 0px rgba(0, 0, 0, .1)'
   },
